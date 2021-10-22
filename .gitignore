@@ -1,0 +1,4 @@
+# Project exclude paths
+/target/
+src/main/java/by/epam/task3/main/
+/.idea/
