@@ -37,7 +37,11 @@ public class TetraParameters {
 
     @Override
     public int hashCode() {
-        return Objects.hash(area, volume);
+        int hash = 1;
+        double area = this.area;
+        double volume = this.volume;
+        hash = hash + Double.hashCode(area) + Double.hashCode(volume);
+        return hash;
     }
 
     @Override

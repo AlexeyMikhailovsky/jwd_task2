@@ -4,7 +4,7 @@ import by.epam.task3.entity.Tetraedr;
 
 import java.util.Comparator;
 
-public class TetraHighComparator implements Comparator<Tetraedr> {
+public class TetraHeightComparator implements Comparator<Tetraedr> {
 
     @Override
     public int compare(Tetraedr o1, Tetraedr o2) {

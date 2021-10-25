@@ -9,10 +9,10 @@ public class TetraVolumeComporator implements Comparator<Tetraedr> {
 
     @Override
     public int compare(Tetraedr o1, Tetraedr o2) {
-        TetraServiceImpl calculation = new TetraServiceImpl();
-        double firsTetraVolume = calculation.tetraedrVolume(o1);
-        double secondTetraVolume = calculation.tetraedrVolume(o2);
-        return Double.compare(firsTetraVolume,secondTetraVolume);
+        TetraServiceImpl tetraService = new TetraServiceImpl();
+        double firstTetraedrVolume = tetraService.tetraedrVolume(o1);
+        double secondTetraedrVolume = tetraService.tetraedrVolume(o2);
+        return Double.compare(firstTetraedrVolume,secondTetraedrVolume);
     }
 
 }

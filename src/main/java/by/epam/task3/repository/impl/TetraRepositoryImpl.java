@@ -3,8 +3,6 @@ package by.epam.task3.repository.impl;
 import by.epam.task3.entity.Tetraedr;
 import by.epam.task3.repository.Specification;
 import by.epam.task3.repository.TetraRepository;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;

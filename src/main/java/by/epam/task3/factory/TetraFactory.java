@@ -11,22 +11,22 @@ public class TetraFactory {
 
     private static Logger logger = LogManager.getLogger();
 
-    public static Tetraedr createTetra(Point point, double edge, double height)  {
+    public static Tetraedr createTetraedr(Point point, double edge, double height)  {
         Tetraedr tetra = new Tetraedr(point,edge,height);
         return tetra;
     }
 
-    public static Tetraedr createTetra(double[] parameters) {
+    public static Tetraedr createTetraedr(double[] parameters) {
         Point points = new Point(parameters[0], parameters[1], parameters[2]);
         double edge = parameters[3];
         double height = parameters[4];
-        return createTetra(points, edge, height);
+        return createTetraedr(points, edge, height);
     }
 
-    public static List<Tetraedr> createTetraList(List<double[]> coordinates) {
+    public static List<Tetraedr> createTetraedrList(List<double[]> coordinates) {
         List<Tetraedr> tetraeders;
         tetraeders = coordinates.stream()
-                .map(arr -> createTetra(arr))
+                .map(arr -> createTetraedr(arr))
                 .filter(e -> e != null)
                 .collect(Collectors.toList());
         return tetraeders;

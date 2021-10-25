@@ -3,6 +3,7 @@ package by.epam.task3.entity;
 import by.epam.task3.observer.TetraEvent;
 import by.epam.task3.observer.TetraObservable;
 import by.epam.task3.observer.TetraObserver;
+import by.epam.task3.util.GeneratorId;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -26,6 +27,7 @@ public class Tetraedr implements TetraObservable {
         this.center = center;
         this.edge = edge;
         this.height = height;
+        this.tetraId = GeneratorId.generete();
     }
 
     @Override
@@ -41,25 +43,15 @@ public class Tetraedr implements TetraObservable {
     @Override
     public void notifyObserver() {
         TetraEvent event = new TetraEvent(this);
-        for (TetraObserver observer : observers) {
-            observer.updateParameters(event);
+        if (!observers.isEmpty()) {
+            for (TetraObserver observer : observers) {
+                observer.updateParameters(event);
+            }
         }
-    }
-
-    public static Logger getLogger() {
-        return logger;
-    }
-
-    public static void setLogger(Logger logger) {
-        Tetraedr.logger = logger;
     }
 
     public Point getCenter() {
         return center;
-    }
-
-    public void setCenter(Point center) {
-        this.center = center;
     }
 
     public double getEdge() {
@@ -68,6 +60,7 @@ public class Tetraedr implements TetraObservable {
 
     public void setEdge(double edge) {
         this.edge = edge;
+        notifyObserver();
     }
 
     public double getHeight() {
@@ -76,6 +69,7 @@ public class Tetraedr implements TetraObservable {
 
     public void setHeight(double height) {
         this.height = height;
+        notifyObserver();
     }
 
     public long getTetraId() {
@@ -84,12 +78,13 @@ public class Tetraedr implements TetraObservable {
 
     public void setTetraId(long tetraId) {
         this.tetraId = tetraId;
+        notifyObserver();
     }
 
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
-        builder.append("Tetrahedron{");
+        builder.append("Tetraedr{");
         builder.append("center=").append(center);
         builder.append(", edge=").append(edge);
         builder.append(", height=").append(height);
@@ -110,6 +105,10 @@ public class Tetraedr implements TetraObservable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(center, edge, height, tetraId, observers);
+        int hash = 1;
+        double edge = this.edge;
+        double height = this.height;
+        hash = hash + Double.hashCode(edge) + Double.hashCode(height);
+        return hash;
     }
 }

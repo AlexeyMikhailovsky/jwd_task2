@@ -23,7 +23,7 @@ public class TetraObserverImpl implements TetraObserver {
         try {
             parameters = warehouse.getParameters(id);
         } catch (CustomException e) {
-            logger.error("Warehouse update error", e);
+            logger.error("Update error", e);
         }
         TetraServiceImpl service = new TetraServiceImpl();
         double volume = service.tetraedrVolume(tetraedr);

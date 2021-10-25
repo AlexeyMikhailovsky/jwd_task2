@@ -16,22 +16,21 @@ public class TetraServiceImpl implements TetraService {
     @Override
     public double tetraedrVolume(Tetraedr tetra) {
         double scale = Math.pow(10, 2);
-        double tetrahedronArea = Math.sqrt(3)* Math.pow(tetra.getEdge(),2);
-        return Math.round(scale * 1/3 * tetrahedronArea * tetra.getHeight())/scale;
+        return Math.round(scale * (Math.pow(tetra.getEdge(),3)*Math.sqrt(2))/12)/scale;
     }
 
     @Override
     public double tetraedrVolumeRatio(Tetraedr tetra, Point point) throws CustomException {
         double scale = Math.pow(10, 2);
         if (point.getZ() <= tetra.getCenter().getZ() || point.getZ() >= tetra.getCenter().getZ() + tetra.getHeight()) {
-            throw new CustomException(" No sections from point " + point.toString());
+            throw new CustomException("From point " + point.toString() + " no section");
         } else {
             double secondHeight = point.getZ() - tetra.getCenter().getZ();
             double firstHeight = tetra.getHeight() - secondHeight;
             double firstEdge = firstHeight * tetra.getEdge() / tetra.getHeight();
             double firstTetraVolume = tetraedrVolume(new Tetraedr(tetra.getCenter(),firstHeight,firstEdge));
-            double secondConeVolume = tetraedrVolume(tetra) - firstTetraVolume;
-            return Math.round(scale * firstTetraVolume / secondConeVolume)/scale;
+            double secondTetraVolume = tetraedrVolume(tetra) - firstTetraVolume;
+            return Math.round(scale * firstTetraVolume / secondTetraVolume)/scale;
         }
     }
 

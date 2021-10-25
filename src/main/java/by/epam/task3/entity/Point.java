@@ -1,7 +1,5 @@
 package by.epam.task3.entity;
 
-import java.util.Objects;
-
 public class Point {
 
     private double x;
@@ -55,7 +53,12 @@ public class Point {
 
     @Override
     public int hashCode() {
-        return Objects.hash(x, y, z);
+        int hash = 1;
+        double x = this.x;
+        double y = this.y;
+        double z = this.z;
+        hash = hash + Double.hashCode(x) + Double.hashCode(y) + Double.hashCode(z);
+        return hash;
     }
 
     @Override
