@@ -1,1 +1,1 @@
-2021-10-22 08:49:59 [main] [lambda$createEllipseListFromCoordinates$2] [40] INFO  by.epam.task3.factory.TetraFactory - ellipse to collect Tetrahedron{center=Point{x=4.0, y=8.0, z=5.0}, edge=1.0, height=1.0, tetraId=0}
+2021-10-22 08:49:59 [main] [lambda$createEllipseListFromCoordinates$2] [40] INFO  by.epam.task2.factory.TetraFactory - ellipse to collect Tetrahedron{center=Point{x=4.0, y=8.0, z=5.0}, edge=1.0, height=1.0, tetraId=0}
