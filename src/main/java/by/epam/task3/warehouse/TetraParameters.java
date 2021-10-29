@@ -1,8 +1,7 @@
 package by.epam.task3.warehouse;
 
-import java.util.Objects;
-
 public class TetraParameters {
+
     private double area;
     private double volume;
 

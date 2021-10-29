@@ -4,16 +4,12 @@ import by.epam.task3.observer.TetraEvent;
 import by.epam.task3.observer.TetraObservable;
 import by.epam.task3.observer.TetraObserver;
 import by.epam.task3.util.GeneratorId;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class Tetraedr implements TetraObservable {
 
-    private static Logger logger = LogManager.getLogger();
     private Point center;
     private double edge;
     private double height;

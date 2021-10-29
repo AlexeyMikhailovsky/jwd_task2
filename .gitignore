@@ -1,6 +1,4 @@
 # Project exclude paths
-src/main/java/by/epam/task3/main/
 .idea/
 target/
-.gitignore
 pom.xml

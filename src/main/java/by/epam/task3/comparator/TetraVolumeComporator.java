@@ -2,7 +2,6 @@ package by.epam.task3.comparator;
 
 import by.epam.task3.entity.Tetraedr;
 import by.epam.task3.service.impl.TetraServiceImpl;
-
 import java.util.Comparator;
 
 public class TetraVolumeComporator implements Comparator<Tetraedr> {

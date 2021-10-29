@@ -5,6 +5,7 @@ import by.epam.task3.repository.Specification;
 import by.epam.task3.service.impl.TetraServiceImpl;
 
 public class AreaSpecification  implements Specification {
+
     private double minArea;
     private double maxArea;
 

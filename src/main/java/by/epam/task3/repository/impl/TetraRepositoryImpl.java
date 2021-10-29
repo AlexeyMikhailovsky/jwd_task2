@@ -4,6 +4,7 @@ import by.epam.task3.entity.Tetraedr;
 import by.epam.task3.repository.Specification;
 import by.epam.task3.repository.TetraRepository;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -23,8 +24,8 @@ public class TetraRepositoryImpl implements TetraRepository {
         return instance;
     }
 
-    public List<Tetraedr> getTetraList() {
-        return new ArrayList<Tetraedr>(tetraList);
+    public List<Tetraedr> getRepository() {
+        return Collections.unmodifiableList(tetraList);
     }
 
     public int size() {

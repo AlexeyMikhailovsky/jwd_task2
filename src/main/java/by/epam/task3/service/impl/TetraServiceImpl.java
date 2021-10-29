@@ -23,7 +23,7 @@ public class TetraServiceImpl implements TetraService {
     public double tetraedrVolumeRatio(Tetraedr tetra, Point point) throws CustomException {
         double scale = Math.pow(10, 2);
         if (point.getZ() <= tetra.getCenter().getZ() || point.getZ() >= tetra.getCenter().getZ() + tetra.getHeight()) {
-            throw new CustomException("From point " + point.toString() + " no section");
+            throw new CustomException("From point " + point + " no section");
         } else {
             double secondHeight = point.getZ() - tetra.getCenter().getZ();
             double firstHeight = tetra.getHeight() - secondHeight;

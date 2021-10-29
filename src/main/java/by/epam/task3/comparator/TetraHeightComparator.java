@@ -1,7 +1,6 @@
 package by.epam.task3.comparator;
 
 import by.epam.task3.entity.Tetraedr;
-
 import java.util.Comparator;
 
 public class TetraHeightComparator implements Comparator<Tetraedr> {

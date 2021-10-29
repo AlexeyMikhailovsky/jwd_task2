@@ -1,2 +1,10 @@
-2021-10-25 23:04:15 [main] [getParameters] [36] ERROR by.epam.task3.warehouse.TetraWarehouse - Tetraedr with such ID is not found - 1
-2021-10-25 23:04:15 [main] [main] [61] ERROR by.epam.task3.main.Main - by.epam.task3.exception.CustomException: Tetraedr with such ID is not found - 1
+2021-10-30 00:04:52 [main] [main] [51] INFO  by.epam.task3.main.Main - Tetraedr{center=Point{x=-4.0, y=8.0, z=5.0}, edge=1.4, height=1.6, tetraId=0}
+2021-10-30 00:04:52 [main] [main] [52] INFO  by.epam.task3.main.Main - Tetraedr{center=Point{x=1.0, y=2.0, z=3.0}, edge=4.0, height=5.0, tetraId=1}
+2021-10-30 00:04:52 [main] [main] [53] INFO  by.epam.task3.main.Main - Tetraedr{center=Point{x=5.0, y=7.0, z=8.0}, edge=2.0, height=1.0, tetraId=2}
+2021-10-30 00:04:52 [main] [main] [54] INFO  by.epam.task3.main.Main - Tetraedr{center=Point{x=2.0, y=8.0, z=5.0}, edge=2.0, height=9.0, tetraId=3}
+2021-10-30 00:04:52 [main] [main] [63] INFO  by.epam.task3.main.Main - TetraParameters{Area=140.3, volume=85.91}
+2021-10-30 00:04:52 [main] [main] [64] INFO  by.epam.task3.main.Main - TetraParameters{Area=6.93, volume=0.94}
+2021-10-30 00:04:52 [main] [main] [65] INFO  by.epam.task3.main.Main - TetraParameters{Area=6.93, volume=0.94}
+2021-10-30 00:04:52 [main] [main] [66] INFO  by.epam.task3.main.Main - TetraParameters{Area=6.93, volume=0.94}
+2021-10-30 00:04:52 [main] [main] [68] INFO  by.epam.task3.main.Main - [Tetraedr{center=Point{x=5.0, y=7.0, z=8.0}, edge=2.0, height=1.0, tetraId=2}, Tetraedr{center=Point{x=-4.0, y=8.0, z=5.0}, edge=9.0, height=1.6, tetraId=0}, Tetraedr{center=Point{x=1.0, y=2.0, z=3.0}, edge=2.0, height=7.0, tetraId=1}, Tetraedr{center=Point{x=2.0, y=8.0, z=5.0}, edge=2.0, height=9.0, tetraId=3}]
+2021-10-30 00:04:52 [main] [main] [69] INFO  by.epam.task3.main.Main - [Tetraedr{center=Point{x=1.0, y=2.0, z=3.0}, edge=2.0, height=7.0, tetraId=1}]

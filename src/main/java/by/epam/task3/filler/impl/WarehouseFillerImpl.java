@@ -6,10 +6,9 @@ import by.epam.task3.service.TetraService;
 import by.epam.task3.service.impl.TetraServiceImpl;
 import by.epam.task3.warehouse.TetraParameters;
 import by.epam.task3.warehouse.TetraWarehouse;
-
 import java.util.List;
 
-public class WarehouseFiller implements Filler {
+public class WarehouseFillerImpl implements Filler {
 
     @Override
     public void fillAll(List<Tetraedr> tetraeders) {

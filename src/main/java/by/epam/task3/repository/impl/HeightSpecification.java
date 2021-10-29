@@ -4,6 +4,7 @@ import by.epam.task3.entity.Tetraedr;
 import by.epam.task3.repository.Specification;
 
 public class HeightSpecification implements Specification {
+
     private double minHeight;
     private double maxHeight;
 

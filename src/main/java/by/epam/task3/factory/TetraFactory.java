@@ -2,14 +2,10 @@ package by.epam.task3.factory;
 
 import by.epam.task3.entity.Point;
 import by.epam.task3.entity.Tetraedr;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class TetraFactory {
-
-    private static Logger logger = LogManager.getLogger();
 
     public static Tetraedr createTetraedr(Point point, double edge, double height)  {
         Tetraedr tetra = new Tetraedr(point,edge,height);

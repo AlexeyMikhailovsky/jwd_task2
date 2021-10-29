@@ -3,7 +3,7 @@ package by.epam.task3.warehouse;
 import by.epam.task3.exception.CustomException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,6 +24,10 @@ public class TetraWarehouse {
                 instance = new TetraWarehouse();
         }
         return instance;
+    }
+
+    public Map<Long, TetraParameters> getWarehouse (){
+        return Collections.unmodifiableMap(warehouse);
     }
 
     public TetraParameters putParameters(Long tetraId, TetraParameters tetraParam) {

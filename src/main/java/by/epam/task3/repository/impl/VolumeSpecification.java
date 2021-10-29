@@ -5,6 +5,7 @@ import by.epam.task3.repository.Specification;
 import by.epam.task3.service.impl.TetraServiceImpl;
 
 public class VolumeSpecification implements Specification {
+
     private final double minVolume;
     private final double maxVolume;
 
@@ -14,9 +15,9 @@ public class VolumeSpecification implements Specification {
     }
 
     @Override
-    public boolean specify(Tetraedr tetrahedron) {
+    public boolean specify(Tetraedr tetraedr) {
         TetraServiceImpl service = new TetraServiceImpl();
-        double volume = service.tetraedrVolume(tetrahedron);
+        double volume = service.tetraedrVolume(tetraedr);
         return (minVolume <= volume && volume <= maxVolume);
     }
 }
